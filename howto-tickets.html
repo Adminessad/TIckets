@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Rápida - Solicitud de Tickets ESSAD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #001F3F 0%, #152a45 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 31, 63, 0.2);
+            padding: 40px;
+            page-break-after: always;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #152a45;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #001F3F;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #555555;
+            font-size: 14px;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            background: #f8f9fa;
+            border-left: 4px solid #152a45;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            background: #e8f0f8;
+            box-shadow: 0 4px 12px rgba(0, 116, 217, 0.15);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #152a45;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .step-title {
+            color: #001F3F;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .step-content {
+            color: #555555;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .step-content ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .step-content li {
+            margin-bottom: 5px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .step-content li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #152a45;
+            font-weight: bold;
+        }
+
+        .url-box {
+            background: #001F3F;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin: 10px 0;
+            word-break: break-all;
+            text-align: center;
+        }
+
+        .fields-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+
+        .fields-table th {
+            background: #152a45;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .fields-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .fields-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .important-section {
+            background: linear-gradient(135deg, #152a45 0%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .important-section h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .important-section h3:before {
+            content: "⚡";
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .do-list, .dont-list {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .do-list h4, .dont-list h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .do-list h4 {
+            color: #4CAF50;
+        }
+
+        .do-list h4:before {
+            content: "✓ ";
+            font-weight: bold;
+        }
+
+        .dont-list h4 {
+            color: #FF6B6B;
+        }
+
+        .dont-list h4:before {
+            content: "✗ ";
+            font-weight: bold;
+        }
+
+        .do-list li, .dont-list li {
+            margin-bottom: 6px;
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .do-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .dont-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #FF6B6B;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #555555;
+            font-size: 11px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+
+        .contact-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #152a45;
+        }
+
+        .contact-item strong {
+            color: #001F3F;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+		<div><img src="images/Essad_logo.jpg" width="400" alt="ESSAD Logo"></div>
+        <h1>📋 Guía Rápida: Solicitud de Tickets</h1>
+        <p><strong>Portal de Servicios TI - ESSAD</strong> | Versión 1.0 | Enero 2026</p>
+    </div>
+
+    <div class="steps-container">
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-title">Accede al Portal</div>
+            <div class="step-content">
+                Abre tu navegador y dirígete a:
+                <div class="url-box">https://it.essad.mx/</div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-title">Selecciona "Tickets de Atención"</div>
+            <div class="step-content">
+                Haz clic en la tarjeta <strong>"Tickets de atención"</strong> en la página principal.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-title">Ingresa a Asana</div>
+            <div class="step-content">
+                Verifica tu email corporativo (usuario@essad.mx).
+                <ul>
+                    <li>Escribe tu contraseña</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-title">Llena el Formulario</div>
+            <div class="step-content">
+                Completa todos los campos (*obligatorios):
+                <ul>
+                    <li>Oficina (ubicación)*</li>
+                    <li>Categoría del problema*</li>
+                    <li>Asunto breve*</li>
+                    <li>Descripción detallada*</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-title">Adjunta Evidencia (Opcional)</div>
+            <div class="step-content">
+                Agrega capturas de pantalla o archivos:
+                <ul>
+                    <li>Máx 5 MB por archivo</li>
+                    <li>JPG, PNG, PDF, DOC, XLSX</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">6</div>
+            <div class="step-title">Envía y Realiza Seguimiento</div>
+            <div class="step-content">
+                Haz clic en <strong>"Enviar"</strong>.
+                <ul>
+                    <li>Recibirás email con ID</li>
+                    <li>Puedes consultar tu estado en Asana</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <table class="fields-table">
+	<p><strong>Glosario para levantar tu ticket</strong></p>	
+        <thead>		
+            <tr>
+                <th>Campo</th>
+                <th>Descripción</th>
+                <th>Ejemplos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Categoría</strong></td>
+                <td>Tipo de problema</td>
+                <td>Falla Internet, Acceso, Software, Hardware, Seguridad, Otros</td>
+            </tr>
+            <tr>
+                <td><strong>Asunto</strong></td>
+                <td>Resumen breve (5-10 palabras)</td>
+                <td>"Correo no sincroniza en móvil" ✓ | "Ayuda" ✗</td>
+            </tr>
+            <tr>
+                <td><strong>Descripción</strong></td>
+                <td>Detalles: qué, error, desde cuándo, intentos</td>
+                <td>Incluir pasos reproducidos y mensajes de error exactos</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="important-section">
+        <div class="do-dont">
+            <div class="do-list">
+                <h4>Recomendado</h4>
+                <ul>
+                    <li>Sé específico en descripción</li>
+                    <li>Adjunta capturas de pantalla</li>
+                    <li>Responde en comentarios del ticket</li>
+                    <li>Un ticket por problema o solicitud</li>
+                    <li>Usa la categoría correcta</li>
+                </ul>
+            </div>
+            <div class="dont-list">
+                <h4>Evitar</h4>
+                <ul>
+                    <li>No envíes tickets duplicados</li>
+                    <li>No uses WhatsApp/email/Teams directo</li>
+                    <li>No adjuntes 5+ archivos</li>
+                    <li>No escribas en MAYÚSCULAS</li>
+                    <li>No cierres el ticket manualmente</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <strong>🌐 Portal</strong>
+            it.essad.mx
+        </div>
+        <div class="contact-item">
+            <strong>📧 Soporte</strong>
+            sistemaspuebla@essad.mx
+        </div>
+        <div class="contact-item">
+            <strong>⏰ Horario</strong>
+            Lunes-Viernes: 09:00 - 18:00
+        </div>
+        <div class="contact-item">
+            <strong>🚨 Emergencia</strong>
+            Marcar como CRÍTICA en ticket avisando a sistemaspuebla@essad.mx
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Tiempos de Respuesta:</strong> Crítica: Inmediato | Alta: 2h | Media: 4 horas | Baja: 5 horas</p>
+        <p style="margin-top: 10px;">Departamento de TI - ESSAD Essentia Advisory S.C. | Versión 1.0 | Enero 2026</p>
+    </div>
+
+</div>
+
+</body>
+</html>

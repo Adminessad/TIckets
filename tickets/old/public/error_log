@@ -1,0 +1,10 @@
+[12-Mar-2026 20:34:04 UTC] PHP Warning:  require_once(/home/essadmx/it.essad.mx/tickets/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/essadmx/it.essad.mx/tickets/public/index.php on line 15
+[12-Mar-2026 20:34:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/essadmx/it.essad.mx/tickets/public/../vendor/autoload.php' (include_path='.:/opt/alt/php84/usr/share/pear:/opt/alt/php84/usr/share/php:/usr/share/pear:/usr/share/php') in /home/essadmx/it.essad.mx/tickets/public/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/essadmx/it.essad.mx/tickets/public/index.php on line 15
+[12-Mar-2026 20:34:21 UTC] PHP Warning:  require_once(/home/essadmx/it.essad.mx/tickets/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/essadmx/it.essad.mx/tickets/public/index.php on line 15
+[12-Mar-2026 20:34:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/essadmx/it.essad.mx/tickets/public/../vendor/autoload.php' (include_path='.:/opt/alt/php84/usr/share/pear:/opt/alt/php84/usr/share/php:/usr/share/pear:/usr/share/php') in /home/essadmx/it.essad.mx/tickets/public/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/essadmx/it.essad.mx/tickets/public/index.php on line 15

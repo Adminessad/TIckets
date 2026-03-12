@@ -1,0 +1,2 @@
+[12-Mar-2026 21:24:58 UTC] PHP Deprecated:  round(): Passing null to parameter #1 ($num) of type int|float is deprecated in /home/essadmx/it.essad.mx/tickets/public/index.php on line 116
+[12-Mar-2026 21:26:40 UTC] PHP Deprecated:  round(): Passing null to parameter #1 ($num) of type int|float is deprecated in /home/essadmx/it.essad.mx/tickets/public/index.php on line 116
